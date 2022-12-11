@@ -156,7 +156,7 @@ if __name__ == "__main__":
     print("Do you want to choose one invest strategy or two-strategy combo? Enter one, or combo: ")
     one_or_combo = input()
     if one_or_combo == "one":
-        print("Please enter the strategy, select from: ethical, growth, index, quality, value:")
+        print("Please enter the strategy from: ethical, growth, index, quality, value:")
         strategy = input()
         portfolio = suggest_stocks(amount, strategy)
         #print(portfolio)
@@ -204,10 +204,17 @@ if __name__ == "__main__":
     else:
         print("Please enter your first strategy from: ethical, growth, index, quality, value:")
         strategy_1 = input()
+        print("Do you have a preferred invest percentage for this first strategy, enter Yes or No:")
+        preferred_perc = input()
+        strategy_1_perc = 0.5
+        if preferred_perc == "Yes":
+            print("Please enter your preferred invest percentage for this first strategy:")
+            strategy_1_perc = float(input())
         print("Please enter your second strategy from: ethical, growth, index, quality, value other than your first strategy:")
         strategy_2 = input()
-        portfolio_1 = suggest_stocks(amount * 0.5, strategy_1)
-        portfolio_2 = suggest_stocks(amount * 0.5, strategy_2)
+        strategy_2_perc = 1 - strategy_1_perc
+        portfolio_1 = suggest_stocks(amount * strategy_1_perc, strategy_1)
+        portfolio_2 = suggest_stocks(amount * strategy_2_perc, strategy_2)
         # print(portfolio)
         name1 = portfolio_1[0]["symbolName"]
         symbol1 = portfolio_1[0]["symbol"]
