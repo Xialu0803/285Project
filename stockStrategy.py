@@ -9,7 +9,7 @@ stock_options = {
         'growth': ['BIIB', 'PINS', 'IPGP', 'SFIX', 'NFLX'],
         'index': ['VTI', 'IXUS', 'ILTB', 'VIS', 'KRE', 'VEU'],
         'quality': ['QUAL', 'SPHQ', 'DGRW', 'QDF','SFR'],
-        'value': ['AAON', 'TME', 'JNJ', 'GRUB', 'TTGT']
+        'value': ['AAON', 'TME', 'JNJ', 'KO', 'TTGT']
 }
 
 def suggest_stocks(amount, strategy_1):
