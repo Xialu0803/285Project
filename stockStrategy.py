@@ -8,8 +8,8 @@ stock_options = {
         'ethical': ['AAPL', 'ADBE', 'SBUX', 'GILD', 'GOOGL'],
         'growth': ['BIIB', 'PINS', 'IPGP', 'SFIX', 'NFLX'],
         'index': ['VTI', 'IXUS', 'ILTB', 'VIS', 'KRE', 'VEU'],
-        'quality': ['QUAL', 'SPHQ', 'DGRW', 'QDF'],
-        'value': ['AAON', 'CTB', 'JNJ', 'GRUB', 'TTGT']
+        'quality': ['QUAL', 'SPHQ', 'DGRW', 'QDF','SFR'],
+        'value': ['AAON', 'TME', 'JNJ', 'GRUB', 'TTGT']
 }
 
 def suggest_stocks(amount, strategy_1):
