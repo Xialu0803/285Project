@@ -58,9 +58,12 @@ def suggest_stocks(amount, strategy_1):
     return stock_info
 
 if __name__ == "__main__":
-    print("please input the amount")
+    print("Please input the amount:")
     amount = int(input())
-    print("please input the strategy,select from:ethical,growth,index,quality,value ")
+    while amount < 5000:
+        print("The minimum invest amount is $5000 USD, please re-enter the amount:")
+        amount = int(input())
+    print("Please input the strategy,select from: ethical, growth, index, quality, value:")
     strategy = input()
     portfolio = suggest_stocks(amount, strategy)
     #print(portfolio)
@@ -86,9 +89,9 @@ if __name__ == "__main__":
     currentValue2= stockNum2 * yf.Ticker(symbol2).info['regularMarketPrice']
     currentValue3= stockNum3*yf.Ticker(symbol3).info['regularMarketPrice']
     print("current Value of the stock chosen: " )
-    print("Stock Name:" + name1 + " Current Value Amount:" + str(currentValue1))
-    print("Stock Name:" + name2 + " Current Value Amount:" + str(currentValue2))
-    print("Stock Name:" + name3 + " Current Value Amount:" + str(currentValue3))
+    print("Stock Name:" + name1 + " Current Value Amount: " + str(currentValue1))
+    print("Stock Name:" + name2 + " Current Value Amount: " + str(currentValue2))
+    print("Stock Name:" + name3 + " Current Value Amount: " + str(currentValue3))
     print("total Current Value: "+str(currentValue1+currentValue2+currentValue3))
     print("------------------------------------------------------------------------------------------")
     print("Weekly trend of this strategy for the past 5 days")
